@@ -3,6 +3,8 @@ Repositório definido para a manutenção do controle de versão dos artefatos g
 
 ### Descrição do Produto:
 
+## João Mário
+
 #### Requisitos:
 1. Requisito/funcionalidade: (nome/descrição)
 2. Requisito/funcionalidade: (nome/descrição)
