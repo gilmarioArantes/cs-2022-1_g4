@@ -38,7 +38,6 @@ Repositório definido para a manutenção do controle de versão dos artefatos g
 |4|JOÃO MÁRIO FIDELIS MARTINS|[JoaoMario17](https://github.com/JoaoMario17)||
 |5|MARCO TÚLIO RIBEIRO FÉLIX|[tmarcorf](https://github.com/tmarcorf)||
 
-
 ### Cronograma:
 |Sprint|Atividade|Responsável|Início|Fim|Situação|Avaliação|
 |---|---|---|---|---|---|---|
