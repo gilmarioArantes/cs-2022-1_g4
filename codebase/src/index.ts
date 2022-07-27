@@ -1,9 +1,9 @@
-import express, { Request, Response } from "express";
+import express from "express";
+import { router } from "./routes";
 
 const app = express();
 
-app.get('/', (_req: Request, res: Response) => {
-  return res.send('first route');
-})
+app.use(express.json());
+app.use(router);
 
-app.listen(3001, () => console.log('Server is up!'));
+app.listen(3001, () => console.log('Server is up on port', 3001));
