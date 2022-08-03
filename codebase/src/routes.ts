@@ -1,13 +1,18 @@
 import { Router } from 'express';
-import { CreateUserController } from './controllers/CreateUserController';
-import { SearchUserByNameController } from './controllers/SearchUserByNameController';
+import { 
+  CreateUserController,
+  CreateAdoptionController,
+} from './controllers';
+
 
 const router = Router();
 
+const createAdoptionController = new CreateAdoptionController();
 const createUserController = new CreateUserController();
-const searchUserByNameController = new SearchUserByNameController();
 
 router.post("/cadastro", createUserController.handler);
-router.get("/pesquisarusuario", searchUserByNameController.handler);
+router.post("/adoptions", createAdoptionController.handler);
+/* router.post("/disappearance")
+router.post("/fidings") */
 
 export { router }

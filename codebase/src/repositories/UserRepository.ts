@@ -1,4 +1,5 @@
 import { PrismaClient } from "@prisma/client"
+import { response } from "express";
 import { UserInterface } from "../models/UserInterface";
 
 const prisma = new PrismaClient()
@@ -19,21 +20,17 @@ export class UserRepository {
     }
   }
 
-  async getUserByName(name: string) {
+  async emailIsInUse(userEmail: string) {
     try {
-      var searchedUser = null;
-
-      await prisma.user.findMany({
+      const result = await prisma.user.findFirst({
         where: {
-          name: name
+          email: userEmail
         }
-      }).then (user => {
-        searchedUser = user;
       });
 
-      return searchedUser;
-
-    } catch (error) {
+      if (result) return true;
+      return false;
+    } catch(error) {
       console.log(error);
     }
   }
