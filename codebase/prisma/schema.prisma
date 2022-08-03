@@ -1,0 +1,79 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider        = "prisma-client-js"
+  previewFeatures = ["fullTextSearch"]
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id              Int               @id @default(autoincrement())
+  name            String
+  email           String
+  logradouro      String?
+  numero          Int?
+  complemento     String?
+  bairro          String?
+  cidade          String?
+  estado          String?
+  senha           String?
+  telefone        String?
+  CEP             Int?
+  Desaparecimento Desaparecimento[]
+  Achado          Achado[]
+  Adocao          Adocao[]
+}
+
+model Pet {
+  id              Int               @id @default(autoincrement())
+  especie         String
+  raca            String?
+  cor             String?
+  nome            String?
+  idade           Int?
+  sexo            String?
+  castrado        Boolean?
+  vacinas         String?
+  foto            Bytes
+  Desaparecimento Desaparecimento[]
+  Achado          Achado[]
+  Adocao          Adocao[]
+}
+
+model Desaparecimento {
+  user                        User   @relation(fields: [user_id], references: [id])
+  user_id                     Int
+  pet                         Pet    @relation(fields: [pet_id], references: [id])
+  pet_id                      Int
+  ultimo_local_de_avistamento String
+  bairro                      String
+  cidade                      String
+
+  @@id([user_id, pet_id])
+}
+
+model Achado {
+  user             User   @relation(fields: [user_id], references: [id])
+  user_id          Int
+  pet              Pet    @relation(fields: [pet_id], references: [id])
+  pet_id           Int
+  local_encontrado String
+  bairro           String
+  cidade           String
+
+  @@id([user_id, pet_id])
+}
+
+model Adocao {
+  user    User @relation(fields: [user_id], references: [id])
+  user_id Int
+  pet     Pet  @relation(fields: [pet_id], references: [id])
+  pet_id  Int
+
+  @@id([user_id, pet_id])
+}
