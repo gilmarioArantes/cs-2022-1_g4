@@ -43,8 +43,8 @@ Repositório definido para a manutenção do controle de versão dos artefatos g
 |Sprint|Atividade|Responsável|Início|Fim|Situação|Avaliação|
 |---|---|---|---|---|---|---|
 |1|Formação de Grupos. Definição de Temas|Equipe|03/06/2022|17/06/2022|Concluída|22/06/2022|
-|2|Construção das Histórias de Usuário|Equipe|18/06/2022|01/07/2022|Em Andamento|06/07/2022|
-|3|Modelagem da Arquitetura e Banco de Dados|Equipe|02/07/2022|15/07/2022|A fazer|20/07/2022|
-|4|Implementação de Cadastros|Equipe|16/07/2022|29/07/2022|A fazer|03/08/2022|
+|2|Construção das Histórias de Usuário|Equipe|18/06/2022|01/07/2022|Concluída|06/07/2022|
+|3|Modelagem da Arquitetura e Banco de Dados|Equipe|02/07/2022|15/07/2022|Conluída|20/07/2022|
+|4|Implementação de Cadastros|Equipe|16/07/2022|29/07/2022|Em Andamento|03/08/2022|
 |5|Implementação de Consultas|Equipe|30/07/2022|12/08/2022|A fazer|17/08/2022|
 |6|Implementação de Atualizações|Equipe|13/08/2022|26/08/2022|A fazer|31/08/2022|
